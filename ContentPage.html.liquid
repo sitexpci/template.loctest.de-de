@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="ms.pagetype" content="contentpage" />
+    <meta name="ms.sitename" content="DOCS" />
+    {{ metadata }}
+    {% if page._op_canonicalUrl != null %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
+    <title>{{ page.title }}</title>
+    {% style css\789a201f6094e3c0abd0.contentpage.css %}
+  </head>
+  <body class="contentpage">
+    {% include header.html %}
+    <div ms.pgarea="body">
+        <article id="main">
+          <section class="container">
+      {{ content }}
+          </section>
+        </article>
+    </div>
+    <div id="footerWrapper"></div>
+    {% js javascript\789a201f6094e3c0abd0.contentpage.js %}
+  </body>
+</html>

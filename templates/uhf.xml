@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shell>
+	<headerLocJson><![CDATA[{"microsoft":"Microsoft","cookie.consent.europe":"Wenn Sie diese Website nutzen, stimmen Sie der Verwendung von Cookies zu Analyse- und Werbezwecken sowie zur Personalisierung des Inhalts zu.","learnmore":"Weitere Informationen","privacystatement":"Datenschutzerklärung","close":"schließen","subheader.aboutdocs":"Informationen zu docs.microsoft.com"}]]></headerLocJson>
+	<footerHtml><![CDATA[<footer id="footer" ms.pgarea="footer" class="footer-layout">
+  <div class="container" role="contentinfo">
+    <a href="https://docs.microsoft.com/" class="logo"><img src="_themes/images/logo-ms.png" alt="Microsoft"></p></a>
+    <ul class="links" ms.cmpgrp="footer link">
+      <li><a id="footer-privacy-link" href="//privacy.microsoft.com/en-US/">Datenschutz und Cookies</a></li>
+      <li><a id="footer-term-of-use" href="#">Nutzungsbedingungen</a></li>
+      <li><a href="//aka.ms/sitefeedback">Feedback</a></li>
+      <li id="impressum-section"><a id="impressum-link" href="#">Impressum</a></li>
+      <li><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx">Marken</a></li>
+    </ul>
+  </div>
+</footer>]]></footerHtml>
+</shell>
