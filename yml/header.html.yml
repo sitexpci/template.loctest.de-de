@@ -1,0 +1,14 @@
+---
+- uid: microsoft
+  name: Microsoft
+- uid: cookie.consent.europe
+  name: Wenn Sie diese Website nutzen, stimmen Sie der Verwendung von Cookies zu Analyse- und Werbezwecken sowie zur Personalisierung des Inhalts zu.
+- uid: learnmore
+  name: Weitere Informationen
+- uid: privacystatement
+  name: Datenschutzerklärung
+- uid: close
+  name: schließen
+- uid: subheader.aboutdocs
+  name: Informationen zu docs.microsoft.com
+...

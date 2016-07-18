@@ -1,0 +1,34 @@
+---
+- uid: theme.light
+  name: Hell
+- uid: theme.dark
+  name: Dunkel
+- uid: edit
+  name: Bearbeiten
+- uid: view.source
+  name: Quelle anzeigen
+- uid: share
+  name: Freigabe
+- uid: twitter
+  name: Twitter
+- uid: facebook
+  name: Facebook
+- uid: slack
+  name: Slack
+- uid: platform
+  name: Plattform
+- uid: language
+  name: Sprache
+- uid: theme
+  name: Design
+- uid: options
+  name: Optionen
+- uid: more
+  name: Mehr
+- uid: author.name
+  name: Name des Autors
+- uid: in.this.article
+  name: In diesem Artikel
+- uid: product.feedback
+  name: Um Feedback zu einem Produkt zu geben, besuchen Sie folgende Seite
+...
