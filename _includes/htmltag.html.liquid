@@ -1,0 +1,5 @@
+{% if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' %}
+<html class="no-js" lang="en-us">
+{% else %}
+<html class="no-js" lang="{{ page.locale }}">
+{% endif %}

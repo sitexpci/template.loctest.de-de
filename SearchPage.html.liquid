@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+{% assign contentLocale = page.locale | downcase %}
+{% include htmltag.html %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,7 @@
     {{ metadata }}
     {% if page._op_canonicalUrl != null %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
     <title>{{ page.title }}</title>
-    {% style css\789a201f6094e3c0abd0.searchpage.css %}
+    {% style css\cea131a85c4d3ac3b1e4.searchpage.css %}
   </head>
   <body>
     {% include header.html %}
@@ -23,6 +24,6 @@
       </article>      
     </div>
     <div id="footerWrapper"></div>
-    {% js javascript\789a201f6094e3c0abd0.searchpage.js %}
+    {% js javascript\cea131a85c4d3ac3b1e4.searchpage.js %}
   </body>
 </html>

@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+{% assign contentLocale = page.locale | downcase %}
+{% include htmltag.html %}
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{ metadata }}
     {% if page._op_canonicalUrl  %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
     <title>{{ page.title }}</title>
-    {% style css\789a201f6094e3c0abd0.conceptual.css %}
+    {% style css\cea131a85c4d3ac3b1e4.conceptual.css %}
   </head>
   <body>
     {% include header.html %}
-
     <div class="container" ms.pgarea="body">
 
       <aside id="social" ms.cmpgrp="social" role="complementary">
         <ol class="social-actions">
+          {% if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' %}
+          <li>
+            <a href="#comments-container" class="button is-primary is-small" id="comments-link">
+              <i class="icon icon-comments"></i>{% loc comments %}
+            </a>
+          </li>
+          {% endif %}
+          <li>
+            <a href="{{ page.content_git_url }}" title="{% loc editdesc %}" class="button is-primary is-small">
+              <i class="icon icon-editor"></i>{% loc edit %}
+            </a>
+          </li>
+          <li>
+            <a href="#" class="button is-primary is-small sharebutton" title="{% loc sharedesc %}"><i class="icon icon-share"></i>{% loc share %}</a>
+            <div class="share-container">
+              {% if contentLocale != 'zh-cn' %}
+                <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>{% loc twitter %}</a></div>
+                <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>{% loc facebook %}</a></div>
+              {% endif %}
+
+              {% if contentLocale == 'ru-ru' %}
+                <div><a href="" class="share-vk"><i class="icon icon-vk"></i>ВКонтакте</a></div>
+              {% endif %}
+
+              {% if contentLocale == 'zh-cn' %}
+                <div class="share-separator"><a href="" class="share-weibo"><i class="icon icon-weibo"></i>&nbsp;微博</a></div>
+                <div><a class="share-wechat"><i class="icon icon-wechat"></i>&nbsp;微信扫一扫</a></div>
+                <div id="shareWithQrcode"></div>
+              {% endif %}
+            </div>
+          </li>
           <li class="menu-theme">
+            <h5>{% loc theme %}</h5>
             <div class="dropdown-container">
               <div class="dropdown">
                 <select aria-label="{% loc theme %}" id="theme-selector">
@@ -25,40 +57,20 @@
               </div>
             </div>
           </li>
-          {% assign contentLocale = page.locale | downcase %}
-          {% if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' %}
-          <li><a href="#comments-container" class="button is-primary is-small" id="comments-link"><i class="icon icon-comments"></i>{% loc comments %}</a></li>
-          {% endif %}
-          <li><a href="{{ page.content_git_url }}" title="{% loc editdesc %}" class="button is-primary is-small"><i class="icon icon-editor"></i>{% loc edit %}</a></li>
-          <li>
-            <a href="#" class="button is-primary is-small sharebutton" title="{% loc sharedesc %}"><i class="icon icon-share"></i>{% loc share %}</a>
-            <div class="share-container">
-              {% if contentLocale != 'zh-cn' %}
-              <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>{% loc twitter %}</a></div>
-              <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>{% loc facebook %}</a></div>
-              {% endif %}
-
-              {% if contentLocale == 'ru-ru' %}
-              <div><a href="" class="share-vk"><i class="icon icon-vk"></i>ВКонтакте</a></div>
-              {% endif %}
-
-              {% if contentLocale == 'zh-cn' %}
-              <div class="share-separator"><a href="" class="share-weibo"><i class="icon icon-weibo"></i>&nbsp;微博</a></div>
-              <div><a class="share-wechat"><i class="icon icon-wechat"></i>&nbsp;微信扫一扫</a></div>
-              <div id="shareWithQrcode"></div>
-              {% endif %}
-              <!--<div><a href="" class="share-slack"><i class="icon icon-slack"></i>{% loc slack %}</a></div>-->
-            </div>
-          </li>
         </ol>
 
         <div id="menu-expand">
           <h6><span id="menu-expand-icon">+ </span>{% loc options %}</h6>
         </div>
+
+        <aside id="side-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+          <h5>{% loc in.this.article %}</h5>
+        </aside>
+
       </aside>
 
-      <div id="toc" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
-        <nav id="sidebar"></nav>
+      <div id="sidebar" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+        <nav id="inlinetoc"></nav>
       </div>
 
       <div id="menu-nav" class="dropdown-container">
@@ -69,6 +81,7 @@
       </div>
 
       <div id="main" role="main">
+        <div class="disclaimer" style="display:none;"><span class="icon icon-disclaimer"></span><span class="disclaimertext">{% loc disclaimer.text %}</span></div>
         {{ page._op_rawTitle }}
         <div id="metadata" ms.cmpgrp="page info">
           <a href="{{ page._op_gitContributorInformation.author.profile_url }}" class="avatar" title="{{ page._op_gitContributorInformation.author.display_name }}">
@@ -91,7 +104,7 @@
           </div>
         </div>
 
-        <aside class="toc" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+        <aside id="center-doc-outline" class="doc-outline" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
           <h5>{% loc in.this.article %}</h5>
         </aside>
 
@@ -113,6 +126,6 @@
 
     <div id="footerWrapper"></div>
 
-    {% js javascript\789a201f6094e3c0abd0.conceptual.js %}
+    {% js javascript\cea131a85c4d3ac3b1e4.conceptual.js %}
   </body>
 </html>
