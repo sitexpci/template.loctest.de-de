@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-{% assign contentLocale = page.locale | downcase %}
-{% include htmltag.html %}
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{ metadata }}
     {% if page._op_canonicalUrl  %}<link href="{{ page._op_canonicalUrl}}" rel="canonical">{% endif %}
     <title>{{ page.title }}</title>
-    {% style css\cea131a85c4d3ac3b1e4.restapi.css %}
+    {% style css\789a201f6094e3c0abd0.restapi.css %}
   </head>
   <body>
 
@@ -22,7 +21,6 @@
       <div class="reference-body-outer">
         <!-- Content -->
         <div id="main" class="reference-body" ms.pgarea="body">
-          <div class="disclaimer" style="display:none;"><i class="disclaimer-icon"></i><span class="disclaimertext">{% loc disclaimer.text %}</span></div>
           <div id="menu-bar">
             <nav class="navbar reference-nav">
                 <ul class="navbar-left" ms.cmpgrp="social">
@@ -76,7 +74,9 @@
               </nav>
           </div>
 	        <div id="menu-expand">
+	          <h6>
 	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
 	        </div>
 	        <div id="menu-nav" class="dropdown-container">
 	          <div class="dropdown dropdown-full mobilenavi">
@@ -85,6 +85,7 @@
 	          </div>
 	        </div>
           <div class="share-container">
+            {% assign contentLocale = page.locale | downcase %}
             {% if contentLocale != 'zh-cn' %}
             <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>{% loc twitter %}</a></div>
             <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>{% loc facebook %}</a></div>
@@ -116,6 +117,6 @@
     </div>
     <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
     <div id="footerWrapper"></div>
-    {% js javascript\cea131a85c4d3ac3b1e4.rest.js %}
+    {% js javascript\789a201f6094e3c0abd0.rest.js %}
   </body>
 </html>
